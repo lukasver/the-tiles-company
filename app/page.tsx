@@ -66,7 +66,7 @@ export default async function Home() {
 
       <LandingFaqCollapsibleSection
         title="Frequently Asked Questions"
-        description="Find answers to common questions about The Tiles Company and our Mahjong Star offerings."
+        description="Find answers to common questions about The Tiles Company and our $TILE token."
         faqItems={[
           {
             question: 'What is The Tiles Company?',
