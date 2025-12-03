@@ -17,6 +17,7 @@ import { TwitterXIcon } from './XIcon';
 import Link from './Link';
 import FooterSupportButton from './FooterSupportButton';
 import Image from 'next/image';
+import Logo from '@/public/assets/icon.png';
 
 export const Footer = ({ className }: { className?: string }) => {
   const columnNumber = footerLinks.filter(({ links }) => links.length).length;
@@ -38,7 +39,7 @@ export const Footer = ({ className }: { className?: string }) => {
             <Link href="/" aria-label={siteConfig.title}>
               <div className="flex items-center gap-3 justify-start">
                 <Image
-                  src="/static/images/logo.png"
+                  {...Logo}
                   alt="The Tiles Company logo"
                   height={29}
                   width={29}

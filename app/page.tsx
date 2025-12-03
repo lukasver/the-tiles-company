@@ -1,33 +1,30 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { LandingFaqCollapsibleSection } from '@/components/LandingFaqCollapsible';
-import { Marquee } from '@/components/ui/marquee';
 import { cn } from '@/lib/utils';
-import { EmbeddedTweet } from 'react-tweet';
-import { getTweet } from 'react-tweet/api';
 import { InteractiveGridPattern } from '@/components/ui/interactive-grid-pattern';
 import { LightRays } from '@/components/ui/light-rays';
 import { Hero } from '@/components/hero';
 
 
-const ids = [
-  '1995889255382753564',
-  '1962893383040442509',
-  '1957789584999305566',
-  '1960374741157527612',
-  '1994059961492492343',
-  '1965778954431746104',
-]
+// const ids = [
+//   '1995889255382753564',
+//   '1962893383040442509',
+//   '1957789584999305566',
+//   '1960374741157527612',
+//   '1994059961492492343',
+//   '1965778954431746104',
+// ]
 
-const Tweet = async ({ id }: { id: string }) => {
-  try {
-    const tweet = await getTweet(id)
-    return tweet ? <EmbeddedTweet tweet={tweet} /> : null
-  } catch (error) {
-    console.error(error)
-    return null
-  }
-}
+// const Tweet = async ({ id }: { id: string }) => {
+//   try {
+//     const tweet = await getTweet(id)
+//     return tweet ? <EmbeddedTweet tweet={tweet} /> : null
+//   } catch (error) {
+//     console.error(error)
+//     return null
+//   }
+// }
 
 export default async function Home() {
 
@@ -57,13 +54,13 @@ export default async function Home() {
         <Hero />
 
       </section>
-      <section className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+      {/* <section className="relative flex w-full flex-col items-center justify-center overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {ids.map(id => <Tweet key={id} id={id.toString()} />)}
         </Marquee>
         <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
         <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
-      </section>
+      </section> */}
 
 
 
@@ -74,17 +71,17 @@ export default async function Home() {
           {
             question: 'What is The Tiles Company?',
             answer:
-              'The Tiles Company is the Web3 infrastructure studio behind Mahjong Stars, building the platform, AI systems, and tokenized economy that power the game\'s next evolution in social mahjong.',
+              'The Tiles Company is the Web3 infrastructure studio behind MJS, building the platform, AI systems, and tokenized economy that power the game\'s next evolution in social mahjong.',
           },
           {
             question: 'What role does the $TILE token play?',
             answer:
-              '$TILE is the core utility token that underpins Mahjong Stars\' Web3 economy, enabling rewards, premium gameplay features, and long-term value alignment between players, partners, and the platform.',
+              '$TILE is the core utility token that underpins MJS\' Web3 economy, enabling rewards, premium gameplay features, and long-term value alignment between players, partners, and the platform.',
           },
           {
-            question: 'How does The Tiles Company use AI in Mahjong Stars?',
+            question: 'How does The Tiles Company use AI?',
             answer:
-              'The Tiles Company integrates hybrid AI so players can train avatars on their own strategies, keep games liquid 24/7, and participate in matches even when they are offline.',
+              'The Tiles Company integrates hybrid AI so players can train avatars on their own strategies, keep games liquid 24/7, and participate in matches even when they are offline. It also allows for more efficient and accurate game analysis and decision-making.',
           },
           {
             question: 'Why is The Tiles Company focused on Web3?',

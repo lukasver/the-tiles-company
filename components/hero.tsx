@@ -91,7 +91,7 @@ export const Hero = () => {
         >
           The Tiles Company connects AI gameplay, multi‑platform access, and the
           {' '}<Highlighter action="highlight" color="oklch(0.5398 0.2198 29.39)" isView={inView}>$TILE</Highlighter>{'  '}
-          token into a compliant, scalable Web3 layer that powers Mahjong Stars new social gaming and rewards model.
+          token into a compliant, scalable Web3 layer that powers MJS new social gaming and rewards model.
         </motion.p>
       </motion.div>
       <motion.div
@@ -103,7 +103,7 @@ export const Hero = () => {
             <Link href="/docs" prefetch={false}>White Paper</Link>
           </Button>
         </motion.div>
-        <motion.div variants={buttonVariants}>
+        <motion.div variants={buttonVariants} className="z-50">
           <Button asChild size={'xl'} variant={'outline'} className="font-semibold">
             <Link href="/docs" prefetch={false}>Follow us</Link>
           </Button>

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from './Link';
 import MobileNav from './MobileNav';
 import { siteConfig } from '@/lib/config';
+import Logo from '@/public/assets/icon.png';
 
 export const Header = ({ className }: { className?: string }) => {
   return (
@@ -19,7 +20,7 @@ export const Header = ({ className }: { className?: string }) => {
         <Link href="/" aria-label={siteConfig.logoTitle}>
           <div className="flex items-center gap-3 justify-between">
             <Image
-              src="/static/images/logo.png"
+              {...Logo}
               alt="The Tiles Company logo"
               height={34}
               width={34}

@@ -12,7 +12,7 @@ export default function About() {
             About The Tiles Company
           </h1>
 
-          <p className="mt-6 md:text-xl">Powering Mahjong Stars</p>
+          <p className="mt-6 md:text-xl">Powering MJS</p>
 
           <p className="mt-6 md:text-xl"></p>
         </section>
