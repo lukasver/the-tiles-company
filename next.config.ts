@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
+import { siteConfig } from './lib/config';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  redirects() {
+    return [
+      {
+        source: '/docs',
+        destination: siteConfig.docsUrl,
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
