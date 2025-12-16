@@ -9,13 +9,13 @@ export const footerLinks: Array<{
       columnName: 'Company',
       links: [
         { href: '/', title: 'Home' },
-        // { href: '/about', title: 'About' },
+        { href: '/ico', title: 'ICO' },
       ],
     },
     { columnName: 'Product', links: [] },
     {
       columnName: 'Docs',
-      links: [{ href: 'https://docs.thetilescompany.io', title: 'White paper' }],
+      links: [{ href: '/docs', title: 'White paper' }],
     },
     {
       columnName: 'Support',

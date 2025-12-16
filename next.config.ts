@@ -9,6 +9,16 @@ const nextConfig: NextConfig = {
         destination: siteConfig.docsUrl,
         permanent: true,
       },
+      {
+        source: '/ico',
+        destination: siteConfig.icoUrl,
+        permanent: true,
+      },
+      {
+        source: '/docs',
+        destination: siteConfig.docsUrl,
+        permanent: true,
+      },
     ];
   },
 };

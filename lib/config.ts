@@ -6,6 +6,7 @@ const siteConfig = {
   businessName: 'The Tiles Company',
   siteUrl: 'https://thetilescompany.io',
   docsUrl: 'https://docs.thetilescompany.io',
+  icoUrl: 'https://ico.thetilescompany.io',
   siteRepo: '',
   socialBanner: '/api/og',
   supportEmail: 'info@thetilescompany.io',
