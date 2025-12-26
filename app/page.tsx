@@ -17,7 +17,7 @@ import { StructuredData } from '@/components/structured-data';
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience. Play traditional Mahjong in a modern, browser-based platform.',
+  description: 'The Tiles Company\'s Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience. Play traditional Mahjong in a modern, browser-based platform.',
   keywords: [
     'Mahjong',
     'online Mahjong',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: `${siteConfig.title} - A New Generation of Online Mahjong`,
-    description: 'Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience.',
+    description: 'The Tiles Company\'s Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience.',
     url: siteConfig.siteUrl,
     siteName: siteConfig.title,
 
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${siteConfig.title} - A New Generation of Online Mahjong`,
-    description: 'Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience.',
+    description: 'The Tiles Company\'s Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience.',
     creator: '@MahjongStars',
   },
   alternates: {
