@@ -3,6 +3,7 @@ export const headerNavLinks: Array<{
 	title: string;
 }> = [
 		{ href: "/", title: "Home" },
-		// { href: "/about", title: "About" },
 		{ href: "/docs", title: "Docs" },
+		{ href: "/#team", title: "Team" },
+		{ href: "/#faq", title: "FAQ" },
 	];

@@ -1,24 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Syne } from 'next/font/google';
 import "./globals.css";
 import "./custom.css";
 import { siteConfig } from '@/lib/config';
 import { ThemeProviders } from './theme-providers';
-
-const displayFont = Syne({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-sans',
-});
-
-const baseFont = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-space-mono',
-});
-
-
-
+import { fontClash, fontTeachers } from './fonts';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -27,17 +12,51 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.title}`,
   },
   description: siteConfig.description,
+  keywords: [
+    'Mahjong',
+    'online Mahjong',
+    'Mahjong Stars',
+    'Web3 gaming',
+    'blockchain gaming',
+    'AI Mahjong',
+    'Mahjong tournaments',
+    'TILE token',
+    'The Tiles Company',
+    'browser-based Mahjong',
+    'digital Mahjong',
+    'social Mahjong',
+  ],
+  authors: [
+    {
+      name: siteConfig.author,
+      url: siteConfig.siteUrl,
+    },
+  ],
+  creator: siteConfig.author,
+  publisher: siteConfig.businessName,
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
-    url: './',
+    url: siteConfig.siteUrl,
     siteName: siteConfig.title,
-    images: [siteConfig.socialBanner],
-    locale: 'en_US',
+    images: [
+      {
+        url: siteConfig.socialBanner,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
+    locale: siteConfig.locale,
     type: 'website',
   },
   alternates: {
-    canonical: './',
+    canonical: siteConfig.siteUrl,
     types: {
       'application/rss+xml': `${siteConfig.siteUrl}/feed.xml`,
     },
@@ -54,10 +73,22 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: siteConfig.title,
     card: 'summary_large_image',
+    title: siteConfig.title,
+    description: siteConfig.description,
     images: [siteConfig.socialBanner],
+    creator: '@MahjongStars',
+    site: '@MahjongStars',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/apple-icon.png', type: 'image/png', sizes: '180x180' },
+    ],
+  },
+  manifest: '/manifest.json',
+  category: 'Gaming',
 };
 
 export const viewport: Viewport = {
@@ -73,7 +104,7 @@ export default function RootLayout({
   return (
     <html
       lang={siteConfig.language}
-      className={`${baseFont.variable} ${displayFont.variable} scroll-smooth antialiased`}
+      className={`${fontTeachers.variable} ${fontClash.variable} scroll-smooth antialiased`}
       suppressHydrationWarning
     >
       <body className="flex flex-col bg-white text-black antialiased dark:bg-gray-950 dark:text-white min-h-screen">

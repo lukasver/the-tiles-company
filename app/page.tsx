@@ -1,30 +1,65 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { LandingFaqCollapsibleSection } from '@/components/LandingFaqCollapsible';
 import { cn } from '@/lib/utils';
 import { InteractiveGridPattern } from '@/components/ui/interactive-grid-pattern';
 import { LightRays } from '@/components/ui/light-rays';
 import { Hero } from '@/components/hero';
+import { LandingAboutSection } from '@/components/landing-about-section';
+import { LandingFeaturesSection } from '@/components/landing-features-section';
+import { LandingTeamSection } from '@/components/landing-team-section';
+import { LandingWeb3Section } from '@/components/landing-web3-section';
+import { LandingCtaSection } from '@/components/landing-cta-section';
+import { LandingFaqSection } from '@/components/landing-faq-section';
+import { applyUTM } from '@/lib/utm';
+import { Metadata } from 'next';
+import { siteConfig } from '@/lib/config';
+import { StructuredData } from '@/components/structured-data';
 
-
-// const ids = [
-//   '1995889255382753564',
-//   '1962893383040442509',
-//   '1957789584999305566',
-//   '1960374741157527612',
-//   '1994059961492492343',
-//   '1965778954431746104',
-// ]
-
-// const Tweet = async ({ id }: { id: string }) => {
-//   try {
-//     const tweet = await getTweet(id)
-//     return tweet ? <EmbeddedTweet tweet={tweet} /> : null
-//   } catch (error) {
-//     console.error(error)
-//     return null
-//   }
-// }
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience. Play traditional Mahjong in a modern, browser-based platform.',
+  keywords: [
+    'Mahjong',
+    'online Mahjong',
+    'Mahjong Stars',
+    'Web3 gaming',
+    'blockchain gaming',
+    'AI Mahjong',
+    'Mahjong tournaments',
+    'TILE token',
+    'The Tiles Company',
+    'browser-based Mahjong',
+    'digital Mahjong',
+    'social Mahjong',
+  ],
+  openGraph: {
+    title: `${siteConfig.title} - A New Generation of Online Mahjong`,
+    description: 'Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience.',
+    url: siteConfig.siteUrl,
+    siteName: siteConfig.title,
+    images: [
+      {
+        url: siteConfig.socialBanner,
+        width: 1200,
+        height: 630,
+        alt: 'The Tiles Company - Mahjong Stars',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${siteConfig.title} - A New Generation of Online Mahjong`,
+    description: 'Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience.',
+    images: [siteConfig.socialBanner],
+    creator: '@MahjongStars',
+  },
+  alternates: {
+    canonical: siteConfig.siteUrl,
+  },
+  category: 'Gaming',
+};
 
 export default async function Home() {
 
@@ -62,37 +97,25 @@ export default async function Home() {
         <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
       </section> */}
 
-
-
-      <LandingFaqCollapsibleSection
-        title="Frequently Asked Questions"
-        description="Find answers to common questions about The Tiles Company and our $TILE token."
-        faqItems={[
-          {
-            question: 'What is The Tiles Company?',
-            answer:
-              'The Tiles Company is the Web3 infrastructure studio behind MJS, building the platform, AI systems, and tokenized economy that power the game\'s next evolution in social mahjong.',
-          },
-          {
-            question: 'What role does the $TILE token play?',
-            answer:
-              '$TILE is the core utility token that underpins MJS\' Web3 economy, enabling rewards, premium gameplay features, and long-term value alignment between players, partners, and the platform.',
-          },
-          {
-            question: 'How does The Tiles Company use AI?',
-            answer:
-              'The Tiles Company integrates hybrid AI so players can train avatars on their own strategies, keep games liquid 24/7, and participate in matches even when they are offline. It also allows for more efficient and accurate game analysis and decision-making.',
-          },
-          {
-            question: 'Why is The Tiles Company focused on Web3?',
-            answer:
-              'By leveraging Web3 rails, The Tiles Company can offer secure wallet integration, on-chain monetization, and transparent tokenomics that turn traditional mahjong engagement into a scalable, global digital gaming economy.',
-          },
-        ]}
-        withBackground
-      />
+      <LandingAboutSection />
+      <LandingFeaturesSection />
+      <LandingTeamSection />
+      <LandingWeb3Section href={applyUTM("/docs", {
+        source: "thetilescompany.io",
+        medium: "landing_page",
+        campaign: "web3_features",
+        content: "web3_section",
+      })} />
+      <LandingCtaSection href={applyUTM("https://www.mahjongstars.com/#newsletter", {
+        source: "thetilescompany.io",
+        medium: "landing_page",
+        campaign: "newsletter_signup",
+        content: "hero",
+      })} />
+      <LandingFaqSection />
 
       <Footer />
+      <StructuredData />
     </div >
   );
 }

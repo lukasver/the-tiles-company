@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { Highlighter } from './ui/highlighter'
 import { useEffect, useState } from 'react'
 import { SparklesText } from './ui/sparkles-text'
+import { ArrowUpRight, Sparkles } from 'lucide-react'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -51,9 +52,13 @@ const buttonVariants = {
 export const Hero = () => {
 
   const [inView, setInView] = useState(false)
+
   useEffect(() => {
-    setInView(true)
+    if (!inView) {
+      setInView(true)
+    }
   }, [])
+
   return (
     <motion.div
       className="container mx-auto grid place-items-center p-4"
@@ -68,10 +73,13 @@ export const Hero = () => {
       >
         <div className="flex flex-col">
           <motion.h1
-            className="text-secondary font-extrabold z-50"
+            className="text-secondary font-extrabold z-50 self-center"
             variants={itemVariants}
           >
-            The Tiles Company
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm mb-6">
+              <Sparkles className="h-4 w-4" />
+              Where Tradition Meets Intelligent Play
+            </div>
           </motion.h1>
           <motion.h2
             className={cn(
@@ -80,18 +88,18 @@ export const Hero = () => {
             )}
             variants={itemVariants}
           >
-            Where Social <SparklesText
+            A <Highlighter action="underline" color="oklch(0.5398 0.2198 29.39)" isView={inView}>New</Highlighter> Generation of <br />
+            <SparklesText
               className="inline-block"
-            > Mahjong</SparklesText> <br />Meets <Highlighter action="underline" color="oklch(0.5398 0.2198 29.39)" isView={inView}>Web3</Highlighter>
+            >Online Mahjong</SparklesText>
           </motion.h2>
         </div>
         <motion.p
           className='z-50 text-primary-foreground text-xl relative text-center md:text-left'
           variants={itemVariants}
         >
-          The Tiles Company connects AI gameplay, multi‑platform access, and the
-          {' '}<Highlighter action="highlight" color="oklch(0.5398 0.2198 29.39)" isView={inView}>$TILE</Highlighter>{'  '}
-          token into a compliant, scalable Web3 layer that powers MJS new social gaming and rewards model.
+          Mahjong has always been more than a game. It is a social ritual, a test of strategy,
+          and a tradition shared across generations. {' '}<Highlighter action="highlight" color="oklch(0.5398 0.2198 29.39)" isView={inView}><span className="font-head font-semibold">Mahjong Stars</span></Highlighter>{'  '} brings that spirit into the digital age.
         </motion.p>
       </motion.div>
       <motion.div
@@ -100,12 +108,12 @@ export const Hero = () => {
       >
         <motion.div variants={buttonVariants} className="z-50">
           <Button asChild size={'xl'} variant={'accent'} className="font-semibold">
-            <Link href="/docs" prefetch={false}>White Paper</Link>
+            <Link href="/docs" prefetch={false}>Learn More <ArrowUpRight className="size-4 text-foreground/50" /></Link>
           </Button>
         </motion.div>
         <motion.div variants={buttonVariants} className="z-50">
           <Button asChild size={'xl'} variant={'outline'} className="font-semibold">
-            <Link href="/docs" prefetch={false}>Follow us</Link>
+            <Link href="mailto:info@thetilescompany.io" prefetch={false}>Contact Us</Link>
           </Button>
         </motion.div>
       </motion.div>
