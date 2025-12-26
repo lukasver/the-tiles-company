@@ -4,6 +4,8 @@ import "./custom.css";
 import { siteConfig } from '@/lib/config';
 import { ThemeProviders } from './theme-providers';
 import { fontClash, fontTeachers } from './fonts';
+import { Analytics } from '@vercel/analytics/next';
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -110,6 +112,7 @@ export default function RootLayout({
             {/* </SearchProvider> */}
           </div>
         </ThemeProviders>
+        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html >
   );
