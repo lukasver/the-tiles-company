@@ -25,14 +25,14 @@ export function genPageMetadata({
       description: description || siteConfig.description,
       url: './',
       siteName: siteConfig.title,
-      images: image ? [image] : [siteConfig.socialBanner],
+      ...(image ? { images: [image] } : {}),
       locale: 'en_US',
       type: 'website',
     },
     twitter: {
       title: `${title} | ${siteConfig.title}`,
       card: 'summary_large_image',
-      images: image ? [image] : [siteConfig.socialBanner],
+      ...(image ? { images: [image] } : {}),
     },
     ...(canonical
       ? {

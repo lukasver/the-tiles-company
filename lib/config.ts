@@ -8,7 +8,6 @@ const siteConfig = {
   docsUrl: 'https://docs.thetilescompany.io',
   icoUrl: 'https://ico.thetilescompany.io',
   siteRepo: '',
-  socialBanner: '/api/og',
   supportEmail: 'info@thetilescompany.io',
   email: 'info@thetilescompany.io',
   twitter: 'https://x.com/MahjongStars',

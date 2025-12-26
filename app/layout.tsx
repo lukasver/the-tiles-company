@@ -44,14 +44,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.siteUrl,
     siteName: siteConfig.title,
-    images: [
-      {
-        url: siteConfig.socialBanner,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.title,
-      },
-    ],
     locale: siteConfig.locale,
     type: 'website',
   },
@@ -76,7 +68,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [siteConfig.socialBanner],
     creator: '@MahjongStars',
     site: '@MahjongStars',
   },

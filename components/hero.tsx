@@ -73,7 +73,7 @@ export const Hero = () => {
       >
         <div className="flex flex-col">
           <motion.h1
-            className="text-secondary font-extrabold z-50 self-center"
+            className="text-secondary font-extrabold z-40 self-center"
             variants={itemVariants}
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm mb-6">
@@ -83,7 +83,7 @@ export const Hero = () => {
           </motion.h1>
           <motion.h2
             className={cn(
-              "relative text-4xl md:text-5xl lg:text-6xl leading-tight font-semibold md:max-w-2xl text-primary-foreground font-display z-50",
+              "relative text-4xl md:text-5xl lg:text-6xl leading-tight font-semibold md:max-w-2xl text-primary-foreground font-display z-40",
               "text-center md:text-left"
             )}
             variants={itemVariants}
@@ -95,7 +95,7 @@ export const Hero = () => {
           </motion.h2>
         </div>
         <motion.p
-          className='z-50 text-primary-foreground text-xl relative text-center md:text-left'
+          className='z-40 text-primary-foreground text-xl relative text-center md:text-left'
           variants={itemVariants}
         >
           Mahjong has always been more than a game. It is a social ritual, a test of strategy,
@@ -106,12 +106,12 @@ export const Hero = () => {
         className="flex flex-row gap-4 mt-8"
         variants={containerVariants}
       >
-        <motion.div variants={buttonVariants} className="z-50">
+        <motion.div variants={buttonVariants} className="z-40">
           <Button asChild size={'xl'} variant={'accent'} className="font-semibold">
             <Link href="/docs" prefetch={false}>Learn More <ArrowUpRight className="size-4 text-foreground/50" /></Link>
           </Button>
         </motion.div>
-        <motion.div variants={buttonVariants} className="z-50">
+        <motion.div variants={buttonVariants} className="z-40">
           <Button asChild size={'xl'} variant={'outline'} className="font-semibold">
             <Link href="mailto:info@thetilescompany.io" prefetch={false}>Contact Us</Link>
           </Button>

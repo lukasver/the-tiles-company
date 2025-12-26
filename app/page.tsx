@@ -37,14 +37,7 @@ export const metadata: Metadata = {
     description: 'Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience.',
     url: siteConfig.siteUrl,
     siteName: siteConfig.title,
-    images: [
-      {
-        url: siteConfig.socialBanner,
-        width: 1200,
-        height: 630,
-        alt: 'The Tiles Company - Mahjong Stars',
-      },
-    ],
+
     locale: 'en_US',
     type: 'website',
   },
@@ -52,7 +45,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${siteConfig.title} - A New Generation of Online Mahjong`,
     description: 'Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience.',
-    images: [siteConfig.socialBanner],
     creator: '@MahjongStars',
   },
   alternates: {
