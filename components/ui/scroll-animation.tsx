@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { motion, useInView } from "motion/react";
-import { useRef, ReactNode } from "react";
-import { cn } from "@/lib/utils";
+import { motion, useInView } from 'motion/react';
+import { useRef, ReactNode } from 'react';
+import { cn } from '@/lib/utils';
 
 interface ScrollAnimationProps {
   children: ReactNode;
@@ -15,7 +15,7 @@ interface ScrollAnimationProps {
    * - slideLeft: Slides in from the left
    * - slideRight: Slides in from the right
    */
-  variant?: "fadeUp" | "fadeIn" | "scale" | "slideLeft" | "slideRight";
+  variant?: 'fadeUp' | 'fadeIn' | 'scale' | 'slideLeft' | 'slideRight';
   /**
    * Delay before animation starts (in seconds)
    */
@@ -64,20 +64,22 @@ const animationVariants = {
 export const ScrollAnimation = ({
   children,
   className,
-  variant = "fadeUp",
+  variant = 'fadeUp',
   delay = 0,
   duration = 0.5,
-  margin = "-10%",
+  margin = '-10%',
   once = true,
 }: ScrollAnimationProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, {
     once,
-    margin,
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    margin: margin as any,
   });
 
   const springConfig = {
-    type: "spring" as const,
+    type: 'spring' as const,
     stiffness: 100,
     damping: 15,
     mass: 1,
@@ -87,8 +89,8 @@ export const ScrollAnimation = ({
     <motion.div
       ref={ref}
       className={cn(className)}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      initial='hidden'
+      animate={isInView ? 'visible' : 'hidden'}
       variants={animationVariants[variant]}
       transition={{
         ...springConfig,
@@ -100,4 +102,3 @@ export const ScrollAnimation = ({
     </motion.div>
   );
 };
-
