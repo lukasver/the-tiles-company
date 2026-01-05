@@ -63,7 +63,7 @@ export default async function Home() {
         <div className="mx-auto w-full container">
           <Header className="mb-0 lg:mb-0" />
         </div>
-        <section className="relative h-screen w-screen grid place-items-center bg-transparent">
+        <section className="relative h-screen w-screen grid place-items-center bg-transparent z-9">
           {/* bg-radial from-accent/50 from-15% via-40% to-65% via-primary to-background"> */}
           {/* <InteractiveGridPattern
           className={cn("",

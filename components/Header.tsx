@@ -12,7 +12,7 @@ export const Header = ({ className }: { className?: string }) => {
     <header
       className={cn(
         'flex items-center justify-between py-10 flex-wrap w-full mb-20 lg:mb-32 pt-6 p-6 max-w-full container-wide z-10!',
-        'before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-[96px] before:right-0 before:bg-black/50 before:z-0',
+        'before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-[80px] before:sm:h-[96px]  before:right-0 before:bg-black/50 before:z-0',
         className,
       )}
     >
