@@ -1,8 +1,5 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { cn } from '@/lib/utils';
-import { InteractiveGridPattern } from '@/components/ui/interactive-grid-pattern';
-import { LightRays } from '@/components/ui/light-rays';
 import { Hero } from '@/components/hero';
 import { LandingAboutSection } from '@/components/landing-about-section';
 import { LandingFeaturesSection } from '@/components/landing-features-section';
@@ -14,6 +11,7 @@ import { applyUTM } from '@/lib/utm';
 import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
 import { StructuredData } from '@/components/structured-data';
+import BackgroundWrapper from '@/components/bg-wrapper';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -59,11 +57,15 @@ export default async function Home() {
     <div className="grid grid-rows-[auto_minmax(100vh,1fr)_auto] w-full items-center fancy-overlay">
 
 
-      <div className="mx-auto w-full container">
-        <Header className="mb-0 lg:mb-0" />
-      </div>
-      <section className="relative size-full grid place-items-center bg-radial from-accent/50 from-15% via-40% to-65% via-primary to-background">
-        <InteractiveGridPattern
+      <BackgroundWrapper
+        url="/assets/bg.webp"
+      >
+        <div className="mx-auto w-full container">
+          <Header className="mb-0 lg:mb-0" />
+        </div>
+        <section className="relative h-screen w-screen grid place-items-center bg-transparent">
+          {/* bg-radial from-accent/50 from-15% via-40% to-65% via-primary to-background"> */}
+          {/* <InteractiveGridPattern
           className={cn("",
             "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
           )}
@@ -76,11 +78,13 @@ export default async function Home() {
           color="#4a0000"
           speed={3}
 
-        />
+        /> */}
 
-        <Hero />
+          <Hero />
 
-      </section>
+        </section>
+      </BackgroundWrapper>
+
       {/* <section className="relative flex w-full flex-col items-center justify-center overflow-hidden">
         <Marquee pauseOnHover className="[--duration:20s]">
           {ids.map(id => <Tweet key={id} id={id.toString()} />)}

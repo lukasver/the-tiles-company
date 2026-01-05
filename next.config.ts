@@ -10,13 +10,8 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/ico',
+        source: '/token',
         destination: siteConfig.icoUrl,
-        permanent: true,
-      },
-      {
-        source: '/docs',
-        destination: siteConfig.docsUrl,
         permanent: true,
       },
     ];

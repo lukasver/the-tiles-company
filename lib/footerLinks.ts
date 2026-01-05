@@ -9,7 +9,7 @@ export const footerLinks: Array<{
       columnName: 'Company',
       links: [
         { href: '/', title: 'Home' },
-        { href: '/ico', title: 'ICO' },
+        { href: '/token', title: '$TILE Token' },
       ],
     },
     { columnName: 'Product', links: [] },

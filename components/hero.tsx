@@ -103,15 +103,20 @@ export const Hero = () => {
         </motion.p>
       </motion.div>
       <motion.div
-        className="flex flex-row gap-4 mt-8"
+        className="grid grid-cols-2 sm:flex flex-row gap-4 mt-8"
         variants={containerVariants}
       >
         <motion.div variants={buttonVariants} className="z-40">
-          <Button asChild size={'xl'} variant={'accent'} className="font-semibold">
+          <Button asChild size={'xl'} variant={'default'} className="font-semibold">
             <Link href="/docs" prefetch={false}>Learn More <ArrowUpRight className="size-4 text-foreground/50" /></Link>
           </Button>
         </motion.div>
         <motion.div variants={buttonVariants} className="z-40">
+          <Button asChild size={'xl'} variant={'accent'} className="font-semibold">
+            <Link href="/token" prefetch={false}> Buy $TILE <ArrowUpRight className="size-4 text-foreground/50" /></Link>
+          </Button>
+        </motion.div>
+        <motion.div variants={buttonVariants} className="col-span-2 sm:col-span-1 z-40 flex justify-center sm:block">
           <Button asChild size={'xl'} variant={'outline'} className="font-semibold">
             <Link href="mailto:info@thetilescompany.io" prefetch={false}>Contact Us</Link>
           </Button>

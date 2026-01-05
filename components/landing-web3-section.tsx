@@ -15,19 +15,19 @@ export const LandingWeb3Section = ({ href }: { href: string }) => {
         <ScrollAnimation variant='fadeIn' delay={0.1}>
           <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm mb-6'>
             <Zap className='h-4 w-4' />
-            Powered by Web3 Infrastructure
+            Web3 Infrastructure
           </div>
         </ScrollAnimation>
         <ScrollAnimation variant='fadeUp' delay={0.2}>
           <h2 className='text-4xl md:text-5xl font-bold mb-6 text-foreground text-balance'>
-            Built on The Tiles Company
+            Built by The Tiles Company
           </h2>
         </ScrollAnimation>
         <ScrollAnimation variant='fadeUp' delay={0.3}>
           <p className='text-lg text-muted-foreground leading-relaxed mb-8'>
-            Mahjong Stars is powered by The Tiles Company blockchain layer,
+            Mahjong Stars is powered by a blockchain layer,
             bringing transparency, ownership, and rewards to your gaming
-            experience. Earn $TILE tokens through gameplay and tournaments.
+            experience. Earn $TILE tokens through gameplay, events and tournaments.
           </p>
         </ScrollAnimation>
         <ScrollAnimation variant='scale' delay={0.4}>
