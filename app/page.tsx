@@ -73,12 +73,8 @@ export default async function Home() {
           height={30}
           squares={[200, 200]}
           squaresClassName="hover:fill-secondary"
-        />
-        <LightRays
-          color="#4a0000"
-          speed={3}
-
         /> */}
+
 
           <Hero />
 

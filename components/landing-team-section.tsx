@@ -6,6 +6,7 @@ import jonas from '@/public/assets/char1.webp';
 import lars from '@/public/assets/char6.webp';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
+import { LightRays } from './ui/light-rays';
 
 interface TeamMember {
   initials: string;
@@ -43,13 +44,21 @@ const teamMembers: TeamMember[] = [
  */
 export const LandingTeamSection = () => {
   return (
-    <section id='team' className='py-20 px-4 bg-muted/30'>
+    <section id='team' className='py-20 px-4 bg-muted/30 relative'>
+      <LightRays
+        color="#4a0000"
+        speed={3}
+
+      />
       <div className='container mx-auto max-w-5xl'>
-        <ScrollAnimation variant='fadeUp' delay={0.1}>
+        <ScrollAnimation variant='fadeUp' delay={0.1} className='z-50'>
           <h2 className='text-4xl md:text-5xl font-bold text-center mb-16 text-foreground'>
             Meet the Team
           </h2>
         </ScrollAnimation>
+        <p className='text-lg text-secondary text-center leading-relaxed mb-16 z-50'>
+          The team has over 20 years of experience building and scaling online Mahjong and social gaming platforms, with a proven track record in product development, live operations, monetisation, and international growth. This depth of experience underpins a disciplined execution from launch to scale.
+        </p>
         <div className='grid md:grid-cols-2 gap-8'>
           {teamMembers.map((member, index) => (
             <ScrollAnimation

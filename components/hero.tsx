@@ -78,28 +78,29 @@ export const Hero = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm mb-6">
               <Sparkles className="h-4 w-4" />
-              Where Tradition Meets Intelligent Play
+              AI, Web3, and Competitive Play
             </div>
           </motion.h1>
           <motion.h2
             className={cn(
-              "relative text-4xl md:text-5xl lg:text-6xl leading-tight font-semibold md:max-w-2xl text-primary-foreground font-display z-40",
+              "relative text-4xl md:text-5xl lg:text-7xl leading-tight font-semibold md:max-w-2xl text-primary-foreground font-display z-40",
               "text-center md:text-left"
             )}
             variants={itemVariants}
           >
-            A <Highlighter action="underline" color="oklch(0.5398 0.2198 29.39)" isView={inView}>New</Highlighter> Generation of <br />
+            A <Highlighter action="underline" color="oklch(0.5398 0.2198 29.39)" isView={inView}>Next</Highlighter> Generation<br />
             <SparklesText
               className="inline-block"
-            >Online Mahjong</SparklesText>
+            >Gaming Platform</SparklesText>
           </motion.h2>
         </div>
         <motion.p
-          className='z-40 text-primary-foreground text-xl relative text-center md:text-left'
+          className='z-40 text-primary-foreground text-xl relative text-center md:text-left leading-relaxed'
           variants={itemVariants}
         >
-          Mahjong has always been more than a game. It is a social ritual, a test of strategy,
-          and a tradition shared across generations. {' '}<Highlighter action="highlight" color="oklch(0.5398 0.2198 29.39)" isView={inView}><span className="font-head font-semibold">Mahjong Stars</span></Highlighter>{'  '} brings that spirit into the digital age.
+          Mahjong Stars is being built as a modern, scalable gaming ecosystem designed for the next wave of digital entertainment. Starting with Mahjong, one of the world&apos;s most widely played strategy games, the platform combines
+          {' '}<Highlighter action="highlight" color="oklch(0.5398 0.2198 29.39)" isView={inView}><span className="font-head font-semibold">intelligent gameplay systems</span></Highlighter>{' '}
+          , social competition, and a Web3-enabled economy to create long-term engagement and sustainable value.
         </motion.p>
       </motion.div>
       <motion.div
