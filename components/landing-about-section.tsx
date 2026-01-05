@@ -21,7 +21,7 @@ export const LandingAboutSection = () => {
             </h2>
           </ScrollAnimation>
           <ScrollAnimation variant='fadeUp' delay={0.2}>
-            <p className='text-lg text-muted-foreground text-center leading-relaxed'>
+            <p className='text-lg text-secondary text-center leading-relaxed'>
               Mahjong Stars reimagines online Mahjong by focusing on what players
               actually care about: fair play, smooth gameplay, and meaningful
               competition. Many existing platforms feel outdated, fragmented, or

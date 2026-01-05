@@ -13,7 +13,7 @@ export const faqItems: FaqItem[] = [
   {
     question: 'What is The Tiles Company?',
     answer:
-      'The Tiles Company is the Web3 infrastructure studio behind MJS, building the platform, AI systems, and tokenized economy that power the game\'s next evolution in social mahjong.',
+      'The Tiles Company is the Web3 infrastructure studio behind MahjongStars, building the platform, AI systems, and tokenized economy that power the game\'s next evolution in social mahjong.',
   },
   {
     question: 'Do I need to download anything?',
@@ -38,7 +38,7 @@ export const faqItems: FaqItem[] = [
   {
     question: 'What role does the $TILE token play?',
     answer:
-      '$TILE is the core utility token that underpins MJS\' Web3 economy, enabling rewards, premium gameplay features, and long-term value alignment between players, partners, and the platform.',
+      '$TILE is the core utility token that underpins MahjongStars Web3 economy, enabling rewards, premium gameplay features, and long-term value alignment between players, partners, and the platform.',
   },
   {
     question: 'How does The Tiles Company use AI?',
