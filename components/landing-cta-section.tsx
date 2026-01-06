@@ -37,8 +37,9 @@ export const LandingCtaSection = ({ href }: { href: string }) => {
             </Button>
             <Button
               size='lg'
-              variant='link'
-              className='border-secondary-foreground/20 text-secondary-foreground hover:bg-primary px-8 bg-transparent'
+              variant='secondary'
+              // className='border-secondary-foreground/20 text-secondary-foreground hover:bg-primary px-8 bg-transparent'
+              asChild
             >
               <a
                 href='mailto:info@thetilescompany.io'

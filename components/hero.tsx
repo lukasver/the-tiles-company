@@ -75,7 +75,7 @@ export const Hero = () => {
             className="text-secondary font-extrabold z-40 self-center"
             variants={itemVariants}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm mb-6">
+            <div className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm mb-6">
               <Sparkles className="h-4 w-4" />
               AI, Web3, and Competitive Play
             </div>
@@ -95,7 +95,7 @@ export const Hero = () => {
           </motion.h2>
         </div>
         <motion.p
-          className='z-40 text-primary-foreground text-xl relative text-center md:text-left leading-relaxed'
+          className='z-40 text-primary-foreground sm:text-xl relative text-center md:text-left leading-relaxed'
           variants={itemVariants}
         >
           Mahjong Stars is being built as a modern, scalable gaming ecosystem designed for the next wave of digital entertainment. Starting with Mahjong, one of the world&apos;s most widely played strategy games, the platform combines

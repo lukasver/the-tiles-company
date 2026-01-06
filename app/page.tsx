@@ -13,9 +13,11 @@ import { siteConfig } from '@/lib/config';
 import { StructuredData } from '@/components/structured-data';
 import BackgroundWrapper from '@/components/bg-wrapper';
 import { cn } from '@/lib/utils';
+import { LandingCoreOpportunitySection } from '@/components/landing-core-opportunity';
+import { LandingRoadmapSection } from '@/components/landing-roadmap-section';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'The Tiles Company | Mahjong Stars',
   description: 'The Tiles Company\'s Mahjong Stars reimagines online Mahjong with Web3 technology, AI-powered learning, and a player-first experience. Play traditional Mahjong in a modern, browser-based platform.',
   keywords: [
     'Mahjong',
@@ -99,12 +101,18 @@ export default async function Home() {
       <LandingTeamSection
         title="Experienced Founding Team"
       />
+      <LandingRoadmapSection
+        className={cn("bg-gradient-to-br from-secondary/10 from-50% to-secondary-dark/90 relative"
+        )}
+      />
       <LandingWeb3Section href={applyUTM("/docs", {
         source: "thetilescompany.io",
         medium: "landing_page",
         campaign: "web3_features",
         content: "web3_section",
       })} />
+      <LandingCoreOpportunitySection />
+
       <LandingCtaSection href={applyUTM("https://www.mahjongstars.com/#newsletter", {
         source: "thetilescompany.io",
         medium: "landing_page",

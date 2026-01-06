@@ -73,7 +73,7 @@ export const ScrollAnimation = ({
 }: ScrollAnimationProps) => {
   const ref = useRef(null);
   const [shouldAnimate, setShouldAnimate] = useState(true);
-  
+
   const isInView = useInView(ref, {
     once,
 
@@ -98,7 +98,7 @@ export const ScrollAnimation = ({
 
     // Check on resize
     window.addEventListener('resize', checkShouldAnimate);
-    
+
     // Check on media query change
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     mediaQuery.addEventListener('change', checkShouldAnimate);

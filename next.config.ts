@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         destination: siteConfig.icoUrl,
         permanent: true,
       },
+      {
+        source: '/roadmap',
+        destination: `${siteConfig.docsUrl}/07-roadmap`,
+        permanent: true,
+      },
     ];
   },
 };

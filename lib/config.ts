@@ -1,6 +1,6 @@
 const siteConfig = {
   title: 'The Tiles Company',
-  description: 'Enhanced Mahjong technology',
+  description: 'Welcome to enhanced Mahjong',
   domain: 'thetilescompany.io',
   logoTitle: '',
   businessName: 'The Tiles Company',
