@@ -20,7 +20,7 @@ export const LandingCoreOpportunitySection = () => {
           <ScrollAnimation variant="fadeUp" delay={0.2}>
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 shrink-0 mt-1">
-                <Globe className="h-5 w-5 text-primary" />
+                <Globe className="h-5 w-5 text-secondary" />
               </div>
               <div>
                 <h3 className="font-semibold mb-2 text-foreground">Global Market</h3>
@@ -34,7 +34,7 @@ export const LandingCoreOpportunitySection = () => {
           <ScrollAnimation variant="fadeUp" delay={0.3}>
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 shrink-0 mt-1">
-                <Brain className="h-5 w-5 text-primary" />
+                <Brain className="h-5 w-5 text-secondary" />
               </div>
               <div>
                 <h3 className="font-semibold mb-2 text-foreground">AI-Driven Systems</h3>
@@ -48,7 +48,7 @@ export const LandingCoreOpportunitySection = () => {
           <ScrollAnimation variant="fadeUp" delay={0.4}>
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 shrink-0 mt-1">
-                <Coins className="h-5 w-5 text-primary" />
+                <Coins className="h-5 w-5 text-secondary" />
               </div>
               <div>
                 <h3 className="font-semibold mb-2 text-foreground">Web3 Economy</h3>
@@ -62,7 +62,7 @@ export const LandingCoreOpportunitySection = () => {
           <ScrollAnimation variant="fadeUp" delay={0.5}>
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 shrink-0 mt-1">
-                <TrendingUp className="h-5 w-5 text-primary" />
+                <TrendingUp className="h-5 w-5 text-secondary" />
               </div>
               <div>
                 <h3 className="font-semibold mb-2 text-foreground">Scalable Growth</h3>
