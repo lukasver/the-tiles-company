@@ -66,63 +66,65 @@ export const Hero = ({ className }: { className?: string }) => {
       whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}
     >
-      <motion.div
-        className="flex flex-col max-w-2xl gap-4 items-center md:items-start"
-        variants={containerVariants}
-      >
-        <div className="flex flex-col">
-          <motion.h1
-            className="text-secondary font-extrabold z-40 self-center"
-            variants={itemVariants}
-          >
-            <div className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm mb-6">
-              <Sparkles className="h-4 w-4" />
-              AI, Web3, and Competitive Play
-            </div>
-          </motion.h1>
-          <motion.h2
-            className={cn(
-              "relative text-4xl md:text-5xl lg:text-7xl leading-tight font-semibold md:max-w-2xl text-primary-foreground font-display z-40",
-              "text-center md:text-left"
-            )}
-            variants={itemVariants}
-          >
-            A <Highlighter action="underline" color="oklch(0.5398 0.2198 29.39)" isView={inView}>Next</Highlighter> Generation<br />
-            {/* <SparklesText
+      <div className="2xl:-mt-30">
+        <motion.div
+          className="flex flex-col max-w-2xl gap-4 items-center md:items-start"
+          variants={containerVariants}
+        >
+          <div className="flex flex-col">
+            <motion.h1
+              className="text-secondary font-extrabold z-40 self-center"
+              variants={itemVariants}
+            >
+              <div className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/30 text-accent-foreground text-sm mb-6">
+                <Sparkles className="h-4 w-4" />
+                AI, Web3, and Competitive Play
+              </div>
+            </motion.h1>
+            <motion.h2
+              className={cn(
+                "relative text-4xl md:text-5xl lg:text-7xl leading-tight font-semibold md:max-w-2xl text-primary-foreground font-display z-40",
+                "text-center md:text-left"
+              )}
+              variants={itemVariants}
+            >
+              A <Highlighter action="underline" color="oklch(0.5398 0.2198 29.39)" isView={inView}>Next</Highlighter> Generation<br />
+              {/* <SparklesText
               className="inline-block"
             >Gaming Platform</SparklesText> */}
-            Gaming Platform
-          </motion.h2>
-        </div>
-        <motion.p
-          className='z-40 text-primary-foreground sm:text-xl relative text-center md:text-left leading-relaxed'
-          variants={itemVariants}
+              Gaming Platform
+            </motion.h2>
+          </div>
+          <motion.p
+            className='z-40 text-primary-foreground sm:text-xl relative text-center md:text-left leading-relaxed'
+            variants={itemVariants}
+          >
+            Mahjong Stars is being built as a modern, scalable gaming ecosystem designed for the next wave of digital entertainment. Starting with Mahjong, one of the world&apos;s most widely played strategy games, the platform combines
+            {' '}<Highlighter action="highlight" color="oklch(0.5398 0.2198 29.39)" isView={inView}><span className="font-head font-semibold">intelligent gameplay systems</span></Highlighter>{' '}
+            , social competition, and a Web3-enabled economy to create long-term engagement and sustainable value.
+          </motion.p>
+        </motion.div>
+        <motion.div
+          className="grid grid-cols-2 sm:flex flex-row gap-4 mt-8"
+          variants={containerVariants}
         >
-          Mahjong Stars is being built as a modern, scalable gaming ecosystem designed for the next wave of digital entertainment. Starting with Mahjong, one of the world&apos;s most widely played strategy games, the platform combines
-          {' '}<Highlighter action="highlight" color="oklch(0.5398 0.2198 29.39)" isView={inView}><span className="font-head font-semibold">intelligent gameplay systems</span></Highlighter>{' '}
-          , social competition, and a Web3-enabled economy to create long-term engagement and sustainable value.
-        </motion.p>
-      </motion.div>
-      <motion.div
-        className="grid grid-cols-2 sm:flex flex-row gap-4 mt-8"
-        variants={containerVariants}
-      >
-        <motion.div variants={buttonVariants} className="z-40">
-          <Button asChild size={'xl'} variant={'default'} className="font-semibold">
-            <Link href="/docs" prefetch={false}>Learn More <ArrowUpRight className="size-4 text-foreground/50" /></Link>
-          </Button>
+          <motion.div variants={buttonVariants} className="z-40">
+            <Button asChild size={'xl'} variant={'default'} className="font-semibold">
+              <Link href="/docs" prefetch={false}>Learn More <ArrowUpRight className="size-4 text-foreground/50" /></Link>
+            </Button>
+          </motion.div>
+          <motion.div variants={buttonVariants} className="z-40">
+            <Button asChild size={'xl'} variant={'accent'} className="font-semibold">
+              <Link href="/token" prefetch={false}> Buy $TILE <ArrowUpRight className="size-4 text-foreground/50" /></Link>
+            </Button>
+          </motion.div>
+          <motion.div variants={buttonVariants} className="col-span-2 sm:col-span-1 z-40 flex justify-center sm:block">
+            <Button asChild size={'xl'} variant={'outline'} className="font-semibold">
+              <Link href="mailto:info@thetilescompany.io" prefetch={false}>Contact Us</Link>
+            </Button>
+          </motion.div>
         </motion.div>
-        <motion.div variants={buttonVariants} className="z-40">
-          <Button asChild size={'xl'} variant={'accent'} className="font-semibold">
-            <Link href="/token" prefetch={false}> Buy $TILE <ArrowUpRight className="size-4 text-foreground/50" /></Link>
-          </Button>
-        </motion.div>
-        <motion.div variants={buttonVariants} className="col-span-2 sm:col-span-1 z-40 flex justify-center sm:block">
-          <Button asChild size={'xl'} variant={'outline'} className="font-semibold">
-            <Link href="mailto:info@thetilescompany.io" prefetch={false}>Contact Us</Link>
-          </Button>
-        </motion.div>
-      </motion.div>
+      </div >
     </motion.div>
   )
 }

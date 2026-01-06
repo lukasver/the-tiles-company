@@ -66,7 +66,7 @@ export default async function Home() {
         <div className="mx-auto w-full container">
           <Header className="mb-0 lg:mb-0" />
         </div>
-        <section className="relative h-[600px] w-screen grid place-items-center bg-transparent z-9 p-4">
+        <section className="relative h-[90dvh] xl:h-[80dvh] 2xl:h-[85dvh] w-screen grid place-items-center bg-transparent z-9 p-4">
           <Hero />
         </section>
       </BackgroundWrapper>
