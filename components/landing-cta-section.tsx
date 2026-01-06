@@ -3,14 +3,15 @@
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
+import { cn } from '@/lib/utils';
 
 /**
  * Landing page call-to-action section component.
  * Displays a prominent CTA with title, description, and action buttons.
  */
-export const LandingCtaSection = ({ href }: { href: string }) => {
+export const LandingCtaSection = ({ href, className }: { href: string, className?: string }) => {
   return (
-    <section className='py-20 px-4 bg-secondary text-secondary-foreground'>
+    <section className={cn('py-20 px-4 bg-secondary text-secondary-foreground', className)}>
       <div className='container mx-auto max-w-4xl text-center'>
         <ScrollAnimation variant='scale' delay={0.1}>
           <h2 className='text-4xl md:text-5xl font-bold mb-6 text-balance'>

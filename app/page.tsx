@@ -92,33 +92,41 @@ export default async function Home() {
         <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
       </section> */}
       <LandingAboutSection />
+      <LandingTeamSection
+        className='bg-[#060912]'
+        title="Experienced Founding Team"
+      />
       <LandingFeaturesSection
         className={cn("relative bg-gradient-to-br from-black/30 via-primary/90 to-black/30",
           `before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-32 before:bg-gradient-to-b before:from-[#060912] before:to-50% before:to-transparent before:pointer-events-none before:z-10
-         after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-32 after:bg-gradient-to-t after:from-[#060912] after:to-50% fter:to-transparent after:pointer-events-none after:z-10`
+         after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-32 after:bg-gradient-to-t after:from-[#060912] after:to-0% after:to-transparent after:pointer-events-none after:z-10`
         )}
       />
-      <LandingTeamSection
-        title="Experienced Founding Team"
-      />
+
       <LandingRoadmapSection
-        className={cn("bg-gradient-to-br from-secondary/10 from-50% to-secondary-dark/90 relative"
-        )}
+        className='bg-[#060912]'
+
       />
-      <LandingWeb3Section href={applyUTM("/docs", {
-        source: "thetilescompany.io",
-        medium: "landing_page",
-        campaign: "web3_features",
-        content: "web3_section",
-      })} />
+      <LandingWeb3Section
+        href={applyUTM("/docs", {
+          source: "thetilescompany.io",
+          medium: "landing_page",
+          campaign: "web3_features",
+          content: "web3_section",
+        })} />
       <LandingCoreOpportunitySection />
 
-      <LandingCtaSection href={applyUTM("https://www.mahjongstars.com/#newsletter", {
-        source: "thetilescompany.io",
-        medium: "landing_page",
-        campaign: "newsletter_signup",
-        content: "hero",
-      })} />
+      <LandingCtaSection
+        className={cn(`relative
+         before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#0D111A] before:to-5% before:to-transparent before:pointer-events-none before:z-10
+         after:content-[""] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[#0D111A] after:to-5% after:to-transparent after:pointer-events-none after:z-10
+        `)}
+        href={applyUTM("https://www.mahjongstars.com/#newsletter", {
+          source: "thetilescompany.io",
+          medium: "landing_page",
+          campaign: "newsletter_signup",
+          content: "hero",
+        })} />
       <LandingFaqSection />
 
       <Footer />

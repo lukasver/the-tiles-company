@@ -7,6 +7,7 @@ import lars from '@/public/assets/char6.webp';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { ScrollAnimation } from '@/components/ui/scroll-animation';
 import { LightRays } from './ui/light-rays';
+import { cn } from '@/lib/utils';
 
 interface TeamMember {
   initials: string;
@@ -42,9 +43,9 @@ const teamMembers: TeamMember[] = [
  * Landing page team section component.
  * Displays team member cards with initials, names, roles, and descriptions.
  */
-export const LandingTeamSection = ({ withRays = false, withMembers = false, title = 'Meet the Team' }: { withRays?: boolean, withMembers?: boolean, title?: string }) => {
+export const LandingTeamSection = ({ withRays = false, withMembers = false, title = 'Meet the Team', className }: { withRays?: boolean, withMembers?: boolean, title?: string, className?: string }) => {
   return (
-    <section id='team' className='py-20 px-4 bg-muted/30 relative'>
+    <section id='team' className={cn('py-20 px-4 bg-muted/30 relative', className)}>
       {withRays && <LightRays
         color="#4a0000"
         speed={3}

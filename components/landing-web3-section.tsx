@@ -3,16 +3,17 @@
 import { Zap } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 import { ScrollAnimation } from './ui/scroll-animation';
+import { cn } from '@/lib/utils';
 
 /**
  * Landing page Web3 section component.
  * Displays information about the Web3 infrastructure and The Tiles Company.
  */
-export const LandingWeb3Section = ({ href }: { href?: string }) => {
+export const LandingWeb3Section = ({ href, className }: { href?: string, className?: string }) => {
   // href is kept for API consistency but not currently used in this component
   void href;
   return (
-    <section className="py-20 px-4">
+    <section className={cn("py-20 px-4", className)}>
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-16">
           <ScrollAnimation variant="fadeUp" delay={0.1}>
