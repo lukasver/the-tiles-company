@@ -105,7 +105,7 @@ export const Hero = ({ className }: { className?: string }) => {
           </motion.p>
         </motion.div>
         <motion.div
-          className="grid grid-cols-2 sm:flex flex-row gap-4 mt-8"
+          className="grid place-items-center grid-cols-2 sm:flex flex-row gap-4 mt-8"
           variants={containerVariants}
         >
           <motion.div variants={buttonVariants} className="z-40">
