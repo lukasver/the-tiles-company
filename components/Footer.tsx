@@ -17,7 +17,8 @@ import { TwitterXIcon } from './XIcon';
 import Link from './Link';
 import FooterSupportButton from './FooterSupportButton';
 import Image from 'next/image';
-import Logo from '@/public/assets/icon.png';
+import Logo from "@/public/assets/mjs-min.webp";
+
 
 export const Footer = ({ className }: { className?: string }) => {
   const columnNumber = footerLinks.filter(({ links }) => links.length).length;

@@ -12,6 +12,7 @@ import { Metadata } from 'next';
 import { siteConfig } from '@/lib/config';
 import { StructuredData } from '@/components/structured-data';
 import BackgroundWrapper from '@/components/bg-wrapper';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -54,7 +55,7 @@ export const metadata: Metadata = {
 export default async function Home() {
 
   return (
-    <div className="grid grid-rows-[auto_minmax(100vh,1fr)_auto] w-full items-center fancy-overlay">
+    <div className="grid grid-rows-auto w-full items-center fancy-overlay">
 
 
       <BackgroundWrapper
@@ -88,10 +89,16 @@ export default async function Home() {
         <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
         <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
       </section> */}
-
       <LandingAboutSection />
-      <LandingFeaturesSection />
-      <LandingTeamSection />
+      <LandingFeaturesSection
+        className={cn("relative bg-gradient-to-br from-black/30 via-primary/90 to-black/30",
+          `before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-32 before:bg-gradient-to-b before:from-[#060912] before:to-50% before:to-transparent before:pointer-events-none before:z-10
+         after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-32 after:bg-gradient-to-t after:from-[#060912] after:to-50% fter:to-transparent after:pointer-events-none after:z-10`
+        )}
+      />
+      <LandingTeamSection
+        title="Experienced Founding Team"
+      />
       <LandingWeb3Section href={applyUTM("/docs", {
         source: "thetilescompany.io",
         medium: "landing_page",

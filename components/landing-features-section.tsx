@@ -54,13 +54,13 @@ const features: Feature[] = [
  * Landing page features section component.
  * Displays a grid of feature cards with icons, titles, and descriptions.
  */
-export const LandingFeaturesSection = () => {
+export const LandingFeaturesSection = ({ title = 'Platform Differentiators', className }: { title?: string, className?: string }) => {
   return (
-    <section id='features' className='py-20 px-4'>
+    <section id='features' className={cn('py-20 px-4', className)}>
       <div className='container mx-auto max-w-6xl'>
         <ScrollAnimation variant='fadeUp' delay={0.1}>
           <h2 className='text-4xl md:text-5xl font-bold text-center mb-16 text-foreground'>
-            Platform Differentiators
+            {title}
           </h2>
         </ScrollAnimation>
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>

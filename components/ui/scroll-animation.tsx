@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useInView } from 'motion/react';
-import { useRef, ReactNode } from 'react';
+import { useRef, ReactNode, useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 interface ScrollAnimationProps {
@@ -60,6 +60,7 @@ const animationVariants = {
 /**
  * ScrollAnimation component that animates children when they enter the viewport.
  * Uses motion/react for smooth spring-based animations.
+ * Automatically disables animations on mobile devices and when user prefers reduced motion.
  */
 export const ScrollAnimation = ({
   children,
@@ -71,6 +72,8 @@ export const ScrollAnimation = ({
   once = true,
 }: ScrollAnimationProps) => {
   const ref = useRef(null);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
+  
   const isInView = useInView(ref, {
     once,
 
@@ -78,12 +81,49 @@ export const ScrollAnimation = ({
     margin: margin as any,
   });
 
+  useEffect(() => {
+    /**
+     * Check if animations should be disabled:
+     * 1. User prefers reduced motion
+     * 2. Device is mobile (screen width < 768px)
+     */
+    const checkShouldAnimate = () => {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const isMobile = window.innerWidth < 768;
+      setShouldAnimate(!prefersReducedMotion && !isMobile);
+    };
+
+    // Check on mount
+    checkShouldAnimate();
+
+    // Check on resize
+    window.addEventListener('resize', checkShouldAnimate);
+    
+    // Check on media query change
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    mediaQuery.addEventListener('change', checkShouldAnimate);
+
+    return () => {
+      window.removeEventListener('resize', checkShouldAnimate);
+      mediaQuery.removeEventListener('change', checkShouldAnimate);
+    };
+  }, []);
+
   const springConfig = {
     type: 'spring' as const,
     stiffness: 100,
     damping: 15,
     mass: 1,
   };
+
+  // If animations are disabled, render without motion
+  if (!shouldAnimate) {
+    return (
+      <div ref={ref} className={cn(className)}>
+        {children}
+      </div>
+    );
+  }
 
   return (
     <motion.div

@@ -42,24 +42,24 @@ const teamMembers: TeamMember[] = [
  * Landing page team section component.
  * Displays team member cards with initials, names, roles, and descriptions.
  */
-export const LandingTeamSection = () => {
+export const LandingTeamSection = ({ withRays = false, withMembers = false, title = 'Meet the Team' }: { withRays?: boolean, withMembers?: boolean, title?: string }) => {
   return (
     <section id='team' className='py-20 px-4 bg-muted/30 relative'>
-      <LightRays
+      {withRays && <LightRays
         color="#4a0000"
         speed={3}
-
       />
+      }
       <div className='container mx-auto max-w-5xl'>
         <ScrollAnimation variant='fadeUp' delay={0.1} className='z-50'>
           <h2 className='text-4xl md:text-5xl font-bold text-center mb-16 text-foreground'>
-            Meet the Team
+            {title}
           </h2>
         </ScrollAnimation>
         <p className='text-lg text-secondary text-center leading-relaxed mb-16 z-50'>
           The team has over 20 years of experience building and scaling online Mahjong and social gaming platforms, with a proven track record in product development, live operations, monetisation, and international growth. This depth of experience underpins a disciplined execution from launch to scale.
         </p>
-        <div className='grid md:grid-cols-2 gap-8'>
+        {withMembers && <div className='grid md:grid-cols-2 gap-8'>
           {teamMembers.map((member, index) => (
             <ScrollAnimation
               key={index}
@@ -94,7 +94,7 @@ export const LandingTeamSection = () => {
               </Card>
             </ScrollAnimation>
           ))}
-        </div>
+        </div>}
       </div>
     </section>
   );

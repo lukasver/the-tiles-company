@@ -6,7 +6,6 @@ import { Button } from './ui/button'
 import { motion } from 'framer-motion'
 import { Highlighter } from './ui/highlighter'
 import { useEffect, useState } from 'react'
-import { SparklesText } from './ui/sparkles-text'
 import { ArrowUpRight, Sparkles } from 'lucide-react'
 
 const containerVariants = {
@@ -89,9 +88,10 @@ export const Hero = () => {
             variants={itemVariants}
           >
             A <Highlighter action="underline" color="oklch(0.5398 0.2198 29.39)" isView={inView}>Next</Highlighter> Generation<br />
-            <SparklesText
+            {/* <SparklesText
               className="inline-block"
-            >Gaming Platform</SparklesText>
+            >Gaming Platform</SparklesText> */}
+            Gaming Platform
           </motion.h2>
         </div>
         <motion.p
