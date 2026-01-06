@@ -48,7 +48,7 @@ const buttonVariants = {
   },
 }
 
-export const Hero = () => {
+export const Hero = ({ className }: { className?: string }) => {
 
   const [inView, setInView] = useState(false)
 
@@ -60,14 +60,14 @@ export const Hero = () => {
 
   return (
     <motion.div
-      className="container mx-auto grid place-items-center p-4"
+      className={cn("size-full grid place-items-center", className)}
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}
     >
       <motion.div
-        className="flex flex-col max-w-2xl gap-4 -mt-30 items-center md:items-start"
+        className="flex flex-col max-w-2xl gap-4 items-center md:items-start"
         variants={containerVariants}
       >
         <div className="flex flex-col">

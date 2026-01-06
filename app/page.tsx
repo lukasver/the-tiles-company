@@ -66,31 +66,11 @@ export default async function Home() {
         <div className="mx-auto w-full container">
           <Header className="mb-0 lg:mb-0" />
         </div>
-        <section className="relative h-screen w-screen grid place-items-center bg-transparent z-9">
-          {/* bg-radial from-accent/50 from-15% via-40% to-65% via-primary to-background"> */}
-          {/* <InteractiveGridPattern
-          className={cn("",
-            "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
-          )}
-          width={30}
-          height={30}
-          squares={[200, 200]}
-          squaresClassName="hover:fill-secondary"
-        /> */}
-
-
+        <section className="relative h-[600px] w-screen grid place-items-center bg-transparent z-9 p-4">
           <Hero />
-
         </section>
       </BackgroundWrapper>
 
-      {/* <section className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <Marquee pauseOnHover className="[--duration:20s]">
-          {ids.map(id => <Tweet key={id} id={id.toString()} />)}
-        </Marquee>
-        <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
-        <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
-      </section> */}
       <LandingAboutSection />
       <LandingTeamSection
         className='bg-[#060912]'
