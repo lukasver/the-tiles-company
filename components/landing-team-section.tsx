@@ -57,7 +57,7 @@ export const LandingTeamSection = ({ withRays = false, withMembers = false, titl
             {title}
           </h2>
         </ScrollAnimation>
-        <p className='text-lg text-secondary text-center leading-relaxed mb-16 z-50'>
+        <p className='text-lg md:text-xl text-secondary text-center leading-relaxed mb-16 z-50'>
           The team has over 20 years of experience building and scaling online Mahjong and social gaming platforms, with a proven track record in product development, live operations, monetisation, and international growth. This depth of experience underpins a disciplined execution from launch to scale.
         </p>
         {withMembers && <div className='grid md:grid-cols-2 gap-8'>

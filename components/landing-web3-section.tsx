@@ -9,9 +9,8 @@ import { cn } from '@/lib/utils';
  * Landing page Web3 section component.
  * Displays information about the Web3 infrastructure and The Tiles Company.
  */
-export const LandingWeb3Section = ({ href, className }: { href?: string, className?: string }) => {
-  // href is kept for API consistency but not currently used in this component
-  void href;
+export const LandingWeb3Section = ({ className }: { className?: string }) => {
+
   return (
     <section className={cn("py-20 px-4", className)}>
       <div className="container mx-auto max-w-5xl">
@@ -28,7 +27,7 @@ export const LandingWeb3Section = ({ href, className }: { href?: string, classNa
             </h2>
           </ScrollAnimation>
           <ScrollAnimation variant="fadeUp" delay={0.3}>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Mahjong Stars incorporates Web3 principles to introduce verifiable digital ownership and an open,
               player-driven economy. Participation in Web3 features is optional, maintaining accessibility for
               traditional players.

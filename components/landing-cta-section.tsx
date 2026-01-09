@@ -19,7 +19,7 @@ export const LandingCtaSection = ({ href, className }: { href: string, className
           </h2>
         </ScrollAnimation>
         <ScrollAnimation variant='fadeUp' delay={0.2}>
-          <p className='text-xl mb-8 opacity-90 text-balance'>
+          <p className='text-lg md:text-xl mb-8 opacity-90 text-balance'>
             Join thousands of players worldwide. Subscribe to our newsletter to
             know first when we launch.
           </p>

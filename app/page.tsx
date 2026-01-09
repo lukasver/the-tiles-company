@@ -84,24 +84,35 @@ export default async function Home() {
       />
 
       <LandingRoadmapSection
-        className='bg-[#060912]'
+        className={cn('bg-[#060912] relative', {
+          'before:content-[""] before:absolute before:inset-0 before:h-full before:bg-gradient-to-b before:from-transparent before:from-75% before:to-muted/30': true,
+        })}
 
       />
-      <LandingCoreOpportunitySection />
+      <LandingCoreOpportunitySection
+
+      />
+
       <LandingWeb3Section
-        href={applyUTM("/docs", {
-          source: "thetilescompany.io",
-          medium: "landing_page",
-          campaign: "web3_features",
-          content: "web3_section",
-        })} />
+        className={cn('relative', {
+          'before:content-[""] before:absolute before:inset-0 before:h-full before:bg-gradient-to-t before:from-transparent before:from-75% before:to-muted/30': true,
+        })}
+      // href={applyUTM("/docs", {
+      //   source: "thetilescompany.io",
+      //   medium: "landing_page",
+      //   campaign: "web3_features",
+      //   content: "web3_section",
+      // })} 
+      />
 
 
-      <LandingCtaSection
-        className={cn(`relative
+      < LandingCtaSection
+        className={
+          cn(`relative
          before:content-[""] before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#0D111A] before:to-5% before:to-transparent before:pointer-events-none before:z-10
          after:content-[""] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[#0D111A] after:to-5% after:to-transparent after:pointer-events-none after:z-10
-        `)}
+        `)
+        }
         href={applyUTM("https://www.mahjongstars.com/#newsletter", {
           source: "thetilescompany.io",
           medium: "landing_page",

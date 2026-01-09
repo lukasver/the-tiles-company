@@ -26,7 +26,8 @@ export const Footer = ({ className }: { className?: string }) => {
   return (
     <footer
       className={cn(
-        'mt-auto w-full bg-linear-to-r from-white/5 via-white/60 to-white/5 backdrop-blur-xs dark:from-slate-700/5 dark:via-slate-700/60 dark:to-slate-700/5',
+        'mt-auto w-full bg-linear-to-r from-white/5 via-white/60 to-white/5 backdrop-blur-xs dark:from-primary/5 dark:via-primary/60 dark:to-primary/5',
+        'before:content-[""] before:absolute before:inset-0 before:h-full before:bg-gradient-to-b before:from-[#060912] before:to-10% before:to-transparent',
         className,
       )}
     >

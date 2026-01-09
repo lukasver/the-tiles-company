@@ -19,7 +19,7 @@ export const LandingRoadmapSection = ({ href = '/roadmap', className }: { href?:
           </h2>
         </ScrollAnimation>
         <ScrollAnimation variant="fadeUp" delay={0.2}>
-          <p className="text-xl mb-8 opacity-90 text-balance">
+          <p className="text-lg md:text-xl mb-8 opacity-90 text-balance">
             Mahjong Stars is being built as a long-term platform with a clear roadmap, modular architecture, and an
             expanding ecosystem.
           </p>

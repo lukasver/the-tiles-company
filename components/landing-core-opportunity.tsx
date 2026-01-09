@@ -2,14 +2,15 @@
 
 import { Brain, Globe, Coins, TrendingUp } from 'lucide-react';
 import { ScrollAnimation } from './ui/scroll-animation';
+import { cn } from '@/lib/utils';
 
 /**
  * Landing page core opportunity section component.
  * Displays key opportunities and advantages of the platform.
  */
-export const LandingCoreOpportunitySection = () => {
+export const LandingCoreOpportunitySection = ({ className }: { className?: string }) => {
   return (
-    <section className="py-20 px-4 bg-muted/30">
+    <section className={cn("py-20 px-4 bg-muted/30", className)}>
       <div className="container mx-auto max-w-4xl">
         <ScrollAnimation variant="fadeUp" delay={0.1}>
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">
