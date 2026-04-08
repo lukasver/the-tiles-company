@@ -84,8 +84,8 @@ export default async function Home() {
       />
 
       <LandingRoadmapSection
-        className={cn('bg-[#060912] relative', {
-          'before:content-[""] before:absolute before:inset-0 before:h-full before:bg-gradient-to-b before:from-transparent before:from-75% before:to-muted/30': true,
+        className={cn('relative z-0 bg-[#060912]', {
+          'before:pointer-events-none before:z-0 before:content-[""] before:absolute before:inset-0 before:h-full before:bg-gradient-to-b before:from-transparent before:from-75% before:to-muted/30': true,
         })}
 
       />

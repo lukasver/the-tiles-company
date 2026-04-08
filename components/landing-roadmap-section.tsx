@@ -11,8 +11,8 @@ import { cn } from '@/lib/utils';
  */
 export const LandingRoadmapSection = ({ href = '/roadmap', className }: { href?: string, className?: string }) => {
   return (
-    <section className={cn("py-20 px-4 bg-secondary text-secondary-foreground", className)}>
-      <div className="container mx-auto max-w-4xl text-center">
+    <section className={cn('py-20 px-4 bg-secondary text-secondary-foreground', className)}>
+      <div className="relative z-10 container mx-auto max-w-4xl text-center">
         <ScrollAnimation variant="fadeUp" delay={0.1}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-balance text-foreground">
             Building the Future of Gaming
@@ -26,13 +26,16 @@ export const LandingRoadmapSection = ({ href = '/roadmap', className }: { href?:
         </ScrollAnimation>
         <ScrollAnimation variant="fadeUp" delay={0.3}>
           <div className="flex flex-col sm:flex-row items-center justify-center">
-            <Button size="lg" variant={'secondary'}>
-              <div className="flex items-center justify-center gap-2">
-                <a href={href} target="_blank" rel="noopener noreferrer">
-                  View Roadmap
-                </a>
-                <ArrowUpRight className="ml-2 h-4 w-4" />
-              </div>
+            <Button size="lg" variant="secondary" asChild>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2"
+              >
+                View Roadmap
+                <ArrowUpRight className="h-4 w-4 shrink-0" aria-hidden />
+              </a>
             </Button>
 
           </div>

@@ -26,14 +26,14 @@ export const Footer = ({ className }: { className?: string }) => {
   return (
     <footer
       className={cn(
-        'mt-auto w-full bg-linear-to-r from-white/5 via-white/60 to-white/5 backdrop-blur-xs dark:from-primary/5 dark:via-primary/60 dark:to-primary/5',
-        'before:content-[""] before:absolute before:inset-0 before:h-full before:bg-gradient-to-b before:from-[#060912] before:to-10% before:to-transparent',
+        'relative z-0 mt-auto w-full bg-linear-to-r from-white/5 via-white/60 to-white/5 backdrop-blur-xs dark:from-primary/5 dark:via-primary/60 dark:to-primary/5',
+        'before:pointer-events-none before:z-0 before:content-[""] before:absolute before:inset-0 before:h-full before:bg-gradient-to-b before:from-[#060912] before:to-10% before:to-transparent',
         className,
       )}
     >
       <div
         className={cn(
-          'flex flex-col gap-4 justify-between items-center w-full md:my-10 p-6',
+          'relative z-10 flex flex-col gap-4 justify-between items-center w-full md:my-10 p-6',
         )}
       >
         <div className="w-full flex flex-col md:flex-row justify-between gap-6 mt-12  p-6 max-w-full container-wide">
@@ -103,7 +103,7 @@ export const Footer = ({ className }: { className?: string }) => {
                         <li key={index}>
                           <ActiveLink
                             href={link.href}
-                            className={'nav-link'}
+                            className={'nav-link hover:text-secondary'}
                             activeClassName={'nav-link-active'}
                           >
                             <span>{link.title}</span>
@@ -118,9 +118,9 @@ export const Footer = ({ className }: { className?: string }) => {
         </div>
       </div>
 
-      <div>
+      <div className="relative z-10">
         <hr
-          className="w-full my-4 border-0 bg-linear-to-r from-white/5 via-black/10 to-white/5 dark:from-black/5 dark:via-white/30 darK:to-black/5"
+          className="w-full my-4 border-0 bg-linear-to-r from-white/5 via-black/10 to-white/5 dark:from-black/5 dark:via-white/30 dark:to-black/5"
           style={{ height: '1px' }}
         />
 
